@@ -8,12 +8,12 @@ class OwnersController < ApplicationController
   get '/owners/new' do
     @pets = Pet.all
     erb :'/owners/new'
-    binding.pry
   end
 
   post '/owners' do
     @owner = Owner.create(params[:owner])
     redirect "/owners/#{@owner.id}"
+    binding.pry
   end
 
   get '/owners/:id/edit' do
