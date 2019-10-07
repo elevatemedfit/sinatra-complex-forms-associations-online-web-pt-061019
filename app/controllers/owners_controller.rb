@@ -15,7 +15,7 @@ class OwnersController < ApplicationController
     redirect "/owners/#{@owner.id}"
     binding.pry
   end
-  
+
 
   get '/owners/:id/edit' do
     @owner = Owner.find(params[:id])
